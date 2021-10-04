@@ -1,0 +1,22 @@
+button{
+    margin: 20px;
+    padding: 10px;
+    background-color: darkorange;
+    color: white;
+    border-radius: 10px;
+}
+.directory{
+    border:2px solid green;
+    background-color: darkorange;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;;
+    color: #fff;
+}
+
+.file{
+    border:2px solid darkgrey;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+}

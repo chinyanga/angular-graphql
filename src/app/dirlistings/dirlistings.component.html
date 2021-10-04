@@ -1,0 +1,31 @@
+<p>Directory Listings Works!</p>
+<h1>{{directory}}</h1>
+<hr/>
+<input type=text [(ngModel)] = 'directory'/>
+<button (click) = 'showListings()'>Show Listings</button>
+<div *ngIf = "loading">
+    Loading .....
+</div>
+<div *ngIf="error">
+    Error :(
+</div>
+
+<div *ngIf="listings">
+    <div *ngFor="let listing of listings"> 
+        <div *ngIf="listing.isdirectory" class="directory">
+            <div (click)='showListings(listing.fullpath)'>
+                <p>Clickable Directory</p>
+                <p>Directory: {{listing.fullpath}}</p>
+            </div>
+        </div>
+        <div class="file">
+            <p>Filename:     {{listing.filename}}</p>
+            <p>Full Path:    {{listing.fullpath}}</p>
+            <p>File Size:    {{listing.filesize}}</p>
+            <p>File Type:    {{listing.type}}</p>
+            <p>Date Created: {{listing.datecreated}}</p>
+            <p>Permisions    {{listing.fileCanReadOrWrite}}</p>
+        </div>
+        
+    </div>
+</div>
